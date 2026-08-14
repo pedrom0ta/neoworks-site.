@@ -1,0 +1,13 @@
+{
+  "name": "NEO — Criamos presença digital que gera resultados",
+  "short_name": "NEO",
+  "description": "Sites institucionais, catálogos digitais e soluções online com design minimalista e alta performance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F3F3F3",
+  "theme_color": "#2B2628",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* keeps anchored sections clear of the fixed header */
+  }
+
+  body {
+    @apply bg-neo-bg text-neo-ink antialiased;
+  }
+
+  ::selection {
+    background-color: #2b2628;
+    color: #f3f3f3;
+  }
+
+  /* Consistent, visible focus ring for keyboard navigation across the site */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #2b2628;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-neo-ink focus:px-5 focus:py-3 focus:text-sm focus:font-medium focus:text-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
