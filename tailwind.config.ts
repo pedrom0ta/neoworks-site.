@@ -27,10 +27,15 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.8s cubic-bezier(0.16,1,0.3,1) forwards",
         "fade-in": "fade-in 0.8s ease forwards",
+        "spin-slow": "spin-slow 40s linear infinite",
       },
       transitionTimingFunction: {
         neo: "cubic-bezier(0.16, 1, 0.3, 1)",

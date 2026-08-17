@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock, ShieldCheck, FileText, type LucideIcon } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { ButtonLink } from "@/components/ui/button";
-import { CONTACT, SITE } from "@/lib/constants";
+import { CONTACT, SITE, HIGHLIGHTS } from "@/lib/constants";
+
+const ICONS: Record<string, LucideIcon> = { Clock, ShieldCheck, FileText };
 
 export function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -59,12 +61,24 @@ export function Hero() {
 
       <div style={step(3)} className="relative z-10 mt-10 flex flex-col items-center gap-4 sm:flex-row">
         <ButtonLink href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" variant="primary">
-          Solicitar orçamento <ArrowRight size={16} aria-hidden="true" />
+          Quero meu site <ArrowRight size={16} aria-hidden="true" />
         </ButtonLink>
         <ButtonLink href="#servicos" variant="secondary">
           Ver serviços
         </ButtonLink>
       </div>
+
+      <ul style={step(4)} className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        {HIGHLIGHTS.map((item) => {
+          const Icon = ICONS[item.icon];
+          return (
+            <li key={item.label} className="flex items-center gap-1.5 text-xs text-neo-gray">
+              <Icon size={13} strokeWidth={1.75} aria-hidden="true" />
+              {item.label}
+            </li>
+          );
+        })}
+      </ul>
 
       <div
         aria-hidden="true"

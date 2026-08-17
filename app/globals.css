@@ -6,6 +6,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem; /* keeps anchored sections clear of the fixed header */
+    scrollbar-gutter: stable; /* reserves scrollbar space so toggling body overflow (mobile menu) doesn't shift the fixed header */
   }
 
   body {

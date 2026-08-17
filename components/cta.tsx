@@ -1,7 +1,9 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button";
 import { CONTACT } from "@/lib/constants";
+
+const CHECKLIST = ["Pagamento após a entrega", "Até 30 dias úteis", "Nota Fiscal"];
 
 export function CTA() {
   return (
@@ -9,14 +11,23 @@ export function CTA() {
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <h2 id="cta-heading" className="mb-6 text-3xl font-semibold leading-tight tracking-tight text-white md:text-5xl">
-            Pronto para colocar sua empresa no digital da forma certa?
+            Sua empresa merece um site à altura.
           </h2>
           <p className="mx-auto mb-10 max-w-xl text-base text-white/60 md:text-lg">
-            Design sólido, entrega rápida e um site que transmite credibilidade desde o primeiro clique.
+            Fale com a NEO e descubra qual solução faz mais sentido para o seu negócio.
           </p>
           <ButtonLink href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer" variant="light">
-            Falar com a NEO agora <ArrowRight size={16} aria-hidden="true" />
+            Solicitar orçamento <ArrowRight size={16} aria-hidden="true" />
           </ButtonLink>
+
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {CHECKLIST.map((item) => (
+              <li key={item} className="flex items-center gap-1.5 text-xs text-white/50">
+                <Check size={13} strokeWidth={2} aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>

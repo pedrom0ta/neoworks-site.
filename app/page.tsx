@@ -2,8 +2,10 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Services } from "@/components/services";
-import { Differentials } from "@/components/differentials";
+import { WhyNeo } from "@/components/why-neo";
+import { Deliverables } from "@/components/deliverables";
 import { Process } from "@/components/process";
+import { Trust } from "@/components/trust";
 import { CTA } from "@/components/cta";
 import { Footer } from "@/components/footer";
 import { CONTACT, SITE } from "@/lib/constants";
@@ -34,8 +36,10 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <Differentials />
+        <WhyNeo />
+        <Deliverables />
         <Process />
+        <Trust />
         <CTA />
       </main>
       <Footer />

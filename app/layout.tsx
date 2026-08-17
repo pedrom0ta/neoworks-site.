@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    "site institucional",
+    "site de apresentação",
     "criação de sites",
     "catálogo digital",
-    "loja virtual",
+    "site profissional",
     "design minimalista",
     "presença digital",
     "NEO",
